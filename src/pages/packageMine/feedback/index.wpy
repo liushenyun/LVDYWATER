@@ -1,0 +1,50 @@
+<template>
+  <view class='feedback-ctner'>
+    <view class='fb-type-outer'>
+      <view class="fd-title">问题类型</view>
+      <view class="type-list-inner">
+        <view class="list-item">净水器问题</view>
+        <view class="list-item">净水器问题</view>
+        <view class="list-item">净水器问题</view>
+      </view>
+
+      <view class="type-list-inner">
+        <view class="list-item list-item-active">净水器问题</view>
+        <view class="list-item">净水器问题</view>
+        <view class="list-item">净水器问题</view>
+      </view>
+    </view>
+
+    <view class='input-wrap'>
+      <view class="input-title">备注:</view>
+      <input bindinput="bindReplaceInput" maxlength='200' class='icx-input' placeholder-class='icx-placeholder' placeholder="请输入您的意见" />
+      <!-- <button class='icx-btn-submit icx-clear-after-border' form-type="submit"> 提交 </button> -->
+    </view>
+    
+    <view class="fb-btn">
+      提交
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Index extends wepy.page {
+  config = {
+    // navigationBarBackgroundColor: '#09103b',
+    // navigationBarTextStyle: '#FFF',
+    navigationBarTitleText: '建议反馈'
+  };
+  components = {
+  };
+  methods = {
+    bindReplaceInput(e) {
+      console.log(e.detail.value);
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+@import './index'
+</style>
+

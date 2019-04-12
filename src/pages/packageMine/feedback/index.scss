@@ -1,0 +1,74 @@
+@import '../../../common/css/rpx.scss';
+@import '../../../common/css/const.scss';
+@import '../../../common/css/mixin.scss';
+page{
+
+}
+.feedback-ctner{
+    width: 100%;
+    height: 100%;
+    padding: rpx(32) rpx(34);
+    .fb-btn{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: rpx(80);
+        height: rpx(88);
+        line-height: rpx(88);
+        background: #00AAFF;
+        border-radius: rpx(8);
+        font-size: rpx(30);
+        color: #FFF;
+        text-align: center;
+    }
+}
+.fb-type-outer {
+    .fd-title{
+        font-size: $size-four;
+        color: #1F1F1F;
+        font-weight: 600;
+        margin-bottom: rpx(36)
+    }
+    .type-list-inner{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rpx(38);
+        .list-item{
+            width: rpx(188);
+            height: rpx(62);
+            text-align: center;
+            line-height: rpx(62);
+            border: rpx(1) solid #999;
+            border-radius: rpx(4);
+            font-size: $size-two;
+            color: $color-word-one;
+            &.list-item-active{
+                color: #00AAFF;
+                border-color: #00AAFF
+            }
+        }
+    }
+}
+.input-wrap{
+    .input-title{
+        width: rpx(100);
+        font-size: rpx(30);
+        color: #1F1F1F;
+        height: rpx(36);
+        line-height: rpx(36);
+        margin-bottom: rpx(20)
+    }
+    input{
+        width: 100%;
+        height: rpx(40);
+        line-height: rpx(40);
+        background: #F2F0F3;
+        border-radius: rpx(8);
+        padding:0 rpx(10);
+        font-size: rpx(30);
+    }
+    
+    .icx-btn-submit{
+        background: linear-gradient(to right, #C0B09D, #80746C);
+        border-radius: 100px;
+    }
+}
