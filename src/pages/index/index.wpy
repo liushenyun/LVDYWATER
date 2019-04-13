@@ -33,6 +33,11 @@
           <text>删除</text>
         </view>
       </view>
+
+      <view class="add-wrap">
+        <button @tap='toScanAddDeviceA' hover-class='icx-click-hover' class="icx-btn-same-sure">扫码添加设备</button>
+        <button bindtap='toNoAddDeviceA' hover-class='icx-click-hover' class="icx-btn-same-sure">输入添加设备</button>
+      </view>
      
     </view>
   </view>
@@ -62,7 +67,19 @@ export default class Index extends wepy.page {
 
   methods = {
     toDeviceA() {
-      wepy.navigateTo({ url: 'url' });
+      wepy.navigateTo({ url: '/pages/packageIndex/device/index' });
+    },
+    toScanAddDeviceA() {
+      // 允许从相机和相册扫码
+      wx.scanCode({
+        success(res) {
+          console.log(res)
+        }
+      })
+    },
+    toNoAddDeviceA() {
+      console.log(4646546)
+      wepy.navigateTo({ url: '/pages/packageIndex/addDevice/index' });
     }
   };
 

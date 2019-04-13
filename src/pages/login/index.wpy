@@ -39,7 +39,7 @@ export default class Login extends wepy.page {
   config = {
     navigationBarTitleText: '登录',
     navigationBarBackgroundColor: '#09103b',
-    navigationBarTextStyle: '#FFF'
+    navigationBarTextStyle: 'white'
   };
 
   components = {

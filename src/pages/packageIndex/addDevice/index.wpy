@@ -1,0 +1,56 @@
+<template>
+  <view class='add-device-ctner'>
+    
+    <view class="input-wrap">
+      <input bindinput="bindReplaceInput" maxlength='200' class='icx-input' placeholder-class='icx-placeholder' placeholder="请输入您的意见" />
+    </view>
+    <button @tap='submitA' hover-class='icx-click-hover' class="icx-btn-same-sure">
+      提交
+    </button>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Index extends wepy.page {
+  config = {
+    // navigationBarBackgroundColor: '#09103b',
+    // navigationBarTextStyle: '#FFF',
+    navigationBarTitleText: '输入设备IMEI号'
+  };
+  components = {
+  };
+  data = {
+    imageArr: []
+  };
+  methods = {
+    bindReplaceInput(e) {
+      console.log(e.detail.value);
+    },
+    submitA() {
+      console.log('提交')
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+@import '../../../common/css/rpx.scss';
+@import '../../../common/css/const.scss';
+@import '../../../common/css/mixin.scss';
+.add-device-ctner{
+    width: 100%;
+    height: 100%;
+    // padding: rpx(32) rpx(34);
+    .input-wrap{
+        padding: rpx(30);
+        border-top: 1px solid #ECECEC;
+        border-bottom: 1px solid #ECECEC;
+    }
+    .icx-btn-same-sure{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 20%;
+    }
+}
+</style>
+

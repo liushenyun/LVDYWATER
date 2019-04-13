@@ -34,7 +34,7 @@ export default class extends wepy.app {
     subPackages: [
       {
         root: 'pages/packageIndex',
-        pages: ['test/index']
+        pages: ['addDevice/index', 'device/index', 'test/index']
       },
       {
         root: 'pages/packageMine',
@@ -49,7 +49,7 @@ export default class extends wepy.app {
         {
           pagePath: 'pages/index/index',
           text: '设备',
-          iconPath: './images/ict_home.png',
+          iconPath: './images/icon_scene_nor.png',
           selectedIconPath: './images/icon_scene_nor.png'
         },
         {

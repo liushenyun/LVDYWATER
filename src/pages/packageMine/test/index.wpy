@@ -9,7 +9,7 @@ import wepy from 'wepy'
 export default class Index extends wepy.page {
   config = {
     navigationBarBackgroundColor: '#09103b',
-    navigationBarTextStyle: '#FFF'
+    navigationBarTextStyle: 'white'
   };
   components = {
   };

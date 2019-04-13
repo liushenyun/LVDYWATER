@@ -94,3 +94,4 @@ const apiwechatLogin = () => `${API_DOMAIN}/connect/wechat`
 1. 我的 => 消息、设备图片
 2. tab栏: 设备未选中图片
 3. 用户反馈：问题类型选中右上角图标
+3. 设备：缺少扫码添加设备和输入添加设备按钮

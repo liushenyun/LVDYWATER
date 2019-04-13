@@ -1,0 +1,104 @@
+<template>
+  <view class='device-ctner'>
+    
+    <view class="circle-wrap">
+      <view class="circle-inner">
+        <view class="circle">
+          <view class="w-a">净水TDS</view>
+          <view class="w-b">15</view>
+          <view class="w-c">原水TDS</view>
+          <view class="w-d">158</view>
+        </view>
+      </view>
+    </view>
+    <view class="status-wrap">
+      <view class="status-same">
+        <view class="status-item">
+          <image src='../../../images/icon_water_nor.png' />
+          <text>制水</text>
+        </view>
+        <view class="status-item">
+          <image src='../../../images/icon_lwaterfull_nor.png' />
+          <text>水满</text>
+        </view>
+        <view class="status-item">
+          <image src='../../../images/icon_nowater_nor.png' />
+          <text>缺水</text>
+        </view>
+        <view class="status-item">
+          <image src='../../../images/icon_data_nor.png' />
+          <text>欠费停机</text>
+        </view>
+      </view>
+      <view class="status-same">
+        <view class="status-item off">
+          <image src='../../../images/icon_water_nor.png' />
+          <text>漏水</text>
+        </view>
+        <view class="status-item {{isRepair?'': 'off'}}">
+          <image src='../../../images/icon_repair_sel.png' />
+          <text>检修</text>
+        </view>
+        <view class="status-item {{isBad?'': 'off'}}">
+          <image src='../../../images/icon_fault_sel.png' />
+          <text>逆水阀故障</text>
+        </view>
+        <view class="status-item">
+          <image src='../../../images/icon_flow_nor.png' />
+          <text>数据异常</text>
+        </view>
+      </view>
+    </view>
+    <view class="btn-wrap">
+      <view class="btn" hover-class='icx-click-hover'>
+        <image src='../../../images/btn_sw_sel.png'></image>
+        <text>开启</text>
+      </view>
+      <view class="btn" hover-class='icx-click-hover'>
+        <image src='../../../images/btn_rinse_sel.png'></image>
+        <text>冲洗</text>
+      </view>
+    </view>
+
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Index extends wepy.page {
+  config = {
+    // navigationBarBackgroundColor: '#09103b',
+    // navigationBarTextStyle: '#FFF',
+    navigationBarTitleText: '我的设备'
+  };
+  components = {
+  };
+  data = {
+    isRepair: false, // 检修
+    isBad: false
+  };
+  methods = {
+    bindReplaceInput(e) {
+      console.log(e.detail.value);
+    },
+    addPhotoA() {
+      let _self = this
+      wx.chooseImage({
+        count: 1,
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album', 'camera'],
+        success(res) {
+          // tempFilePath可以作为img标签的src属性显示图片
+          const tempFilePaths = res.tempFilePaths[0]
+          _self.imageArr.push(tempFilePaths)
+          _self.$apply()
+        }
+      })
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+@import './index'
+</style>
+

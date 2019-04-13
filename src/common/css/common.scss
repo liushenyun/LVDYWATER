@@ -22,7 +22,10 @@ textarea[class~="icx-input"]{
 .icx-click-hover{
     opacity: 0.8;
 }
-
+// 公共样式
+button.icx-btn::after {
+  border: 0;
+}
 // 提交 保存按钮
 .icx-btn-submit{
     background: $color-word-three;
@@ -42,11 +45,12 @@ button.icx-btn-same-cancel::after {
   border: 0;
 }
 button.icx-btn-same-sure{
-  height: rpx(90);
-  line-height: rpx(90);
-  background: #6633FF;
+  height: rpx(88);
+  line-height: rpx(88);
+  background: #00AAFF;
   color: #FFF;
-  font-size: rpx(32);
+  border-radius: rpx(8);
+  font-size: rpx(30);
 }
 button.icx-btn-same-cancel{
   height: rpx(90);
