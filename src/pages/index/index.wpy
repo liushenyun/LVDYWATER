@@ -2,30 +2,38 @@
 <template>
   <view class="index-ctner container-same">
     <wxs src="../../utils/filter.wxs" module="tools"></wxs>
-    <view class='search-wrap'>
-      <view class='input-wrap'>
-        <image src='../../images/ic_search.png' />
-        <input placeholder='搜素附近售卖机' class='icx-input' placeholder-class='icx-placeholder'/>
-      </view>
-      <view class='list-btn'>
-        <image @tap='showMoreList' src='../../images/ic_more.png' />
-      </view>
+    <view class="index-bg">
+      <image src='../../images/bg_home_1.png' />
     </view>
 
-    <view class='map-wrap'>
-      <map
-        id="map"
-        longitude="113.324520"
-        latitude="23.099994"
-        scale="14"
-        controls="{{controls}}"
-        bindcontroltap="controltap"
-        markers="{{markers}}"
-        bindmarkertap="markertap"
-        polyline="{{polyline}}"
-        bindregionchange="regionchange"
-        show-location>
-      </map>
+    <view class="index-device-outer">
+
+      <view class="idevice-list">
+        <image @tap='toDeviceA' class="device-icon" src='../../images/icon_1.png' />
+        <view @tap='toDeviceA' class="device-info">
+          <view class="name">鼎绿源物联网净水机DRO50-9</view>
+          <view class="status">
+            <view class="point"></view><view class="word">设备在线</view>
+          </view>
+        </view>
+        <view class="device-del">
+          <text>删除</text>
+        </view>
+      </view>
+
+      <view class="idevice-list">
+        <image @tap='toDeviceA' class="device-icon" src='../../images/icon_1.png' />
+        <view @tap='toDeviceA' class="device-info">
+          <view class="name">鼎绿源物联网净水机DRO50-9</view>
+          <view class="status off-line">
+            <view class="point"></view><view class="word">设备在线</view>
+          </view>
+        </view>
+        <view class="device-del">
+          <text>删除</text>
+        </view>
+      </view>
+     
     </view>
   </view>
 </template>
@@ -42,37 +50,19 @@ export default class Index extends wepy.page {
   config = {
     // navigationBarBackgroundColor: '#09103b',
     // navigationBarTextStyle: '#FFF'
+    navigationBarTitleText: '设备列表'
   };
   components = {};
 
   mixins = [];
 
-  data = {
-    markers: [{
-      iconPath: "/images/ic_position.png",
-      id: 0,
-      latitude: 23.099994,
-      longitude: 113.324520,
-      title: '位置1',
-      width: 50,
-      height: 50
-    }]
-  };
+  data = {};
 
   computed = {};
 
   methods = {
-    showMoreList() {
-      console.log('showMoreList');
-      wepy.navigateTo({
-        url: '/pages/packageIndex/nearMachine/index'
-      })
-    },
-    regionchange(e) {
-      console.log(e.type)
-    },
-    markertap(e) {
-      console.log(e.markerId)
+    toDeviceA() {
+      wepy.navigateTo({ url: 'url' });
     }
   };
 
@@ -82,11 +72,11 @@ export default class Index extends wepy.page {
     // wepy.navigateTo({
     //   url: '/pages/packageIndex/NearMachine/index'
     // })
-    apiGoodsListF().then(msg => {
-      console.log('86', msg)
-    }).catch(err => {
-      console.log('88', err)
-    });
+    // apiGoodsListF().then(msg => {
+    //   console.log('86', msg)
+    // }).catch(err => {
+    //   console.log('88', err)
+    // });
     this.getSystemInfo();
     this.$apply();
   }

@@ -2,51 +2,73 @@
 @import '../../common/css/const.scss';
 @import '../../common/css/mixin.scss';
 .index-ctner{
-    height: 100%;
-    position: relative;
-    padding-top: rpx(100);
-}
-.search-wrap{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: rpx(100);
-    padding: 0 rpx(32);
-    display: flex;
-    align-items: center;
-}
-.input-wrap{
-    height: rpx(62);
-    flex: 1;
-    background: #F3F3F3;
-    border-radius: rpx(100);
-    display: flex;
-    align-items: center;
-    padding: 0 rpx(26);
-    image {
-        width: rpx(26);
-        height: rpx(28);
-        margin-right: rpx(20);
+    .index-bg{
+        height: rpx(400);
+        image {
+            width: 100%;
+            height: 100%;
+        }
     }
-    input {
-        height: 100%;
-        flex: 1;
-    }
-}
-.list-btn{
-    width: rpx(80);
-    text-align: right;
-    image{
-        width: rpx(44);
-        height: rpx(44);
-    }
-}
-.map-wrap{
-    width: 100%;
-    height: 100%;
-    map {
-        width: 100%;
-        height: 100%;
+    .index-device-outer{
+        padding: 0 rpx(34);
+        .idevice-list {
+            height: rpx(160);
+            display: flex;
+            align-items: center;
+            position: relative;
+            @include borderBottomOnePx;
+            
+            .device-icon{
+                width: rpx(66);
+                height: rpx(58);
+                margin-right: rpx(40)
+            }
+            .device-info{
+                flex: 1;
+                .name{
+                    font-size: rpx(30);
+                    height: rpx(36);
+                    line-height: rpx(36);
+                }
+                .status{
+                    font-size: rpx(20);
+                    padding: rpx(8) rpx(20);
+                    background: #00D9C7;
+                    border-radius: rpx(17);
+                    display: inline-block;
+                    text-align: center;
+                    &.off-line{
+                        background: #C7C7C7;
+                    }
+                    view {
+                        display: inline-block;
+                    }
+                    .point {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: rpx(10);
+                        height: rpx(10);
+                        background: #FFF;
+                        border-radius: 50%;
+                        margin-right: rpx(10);
+                    }
+                    .word {
+                        vertical-align: middle;
+                        color: #FFF;
+                    }
+                }
+            }
+            .device-del{
+                width: rpx(100);
+                font-size: rpx(28);
+                text-align: center;
+                text {
+                    padding: rpx(14) rpx(16);
+                    background: rgba(155, 0, 0, 0.6);
+                    border-radius: rpx(8);
+                    color: #FFF;
+                }
+            }
+        }
     }
 }

@@ -20,7 +20,7 @@ export default class extends wepy.app {
     pages: [
       'pages/index/index',
       'pages/mine/index',
-      'pages/mall/index',
+      // 'pages/mall/index',
       'pages/login/index',
       'pages/authorize/index',
       'pages/webview/index'
@@ -34,7 +34,7 @@ export default class extends wepy.app {
     subPackages: [
       {
         root: 'pages/packageIndex',
-        pages: ['test/index', 'nearMachine/index']
+        pages: ['test/index']
       },
       {
         root: 'pages/packageMine',

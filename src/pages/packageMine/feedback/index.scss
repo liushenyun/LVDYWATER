@@ -20,6 +20,29 @@ page{
         color: #FFF;
         text-align: center;
     }
+    .type-photo-outer{
+        margin: rpx(36) 0;
+        overflow: hidden;
+        .photo-btn,
+        .photo-same{
+            width: rpx(150);
+            height: rpx(150);
+            margin: 0 rpx(20) rpx(20) 0;
+            float: left;
+            position: relative;
+            image {
+                width: 100%;
+                height: 100%;
+            }
+            image.img-del{
+                position: absolute;
+                top: rpx(10);
+                right: rpx(10);
+                width: rpx(30);
+                height: rpx(30);
+            }
+        }
+    }
 }
 .fb-type-outer {
     .fd-title{
@@ -49,6 +72,8 @@ page{
     }
 }
 .input-wrap{
+    padding-bottom: rpx(36);
+    border-bottom: rpx(1) solid rgba(0, 0, 0, 0.1);
     .input-title{
         width: rpx(100);
         font-size: rpx(30);
@@ -65,10 +90,5 @@ page{
         border-radius: rpx(8);
         padding:0 rpx(10);
         font-size: rpx(30);
-    }
-    
-    .icx-btn-submit{
-        background: linear-gradient(to right, #C0B09D, #80746C);
-        border-radius: 100px;
     }
 }
