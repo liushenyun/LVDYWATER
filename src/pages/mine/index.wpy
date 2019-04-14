@@ -87,11 +87,14 @@ export default class Index extends wepy.page {
     },
     toMesA() {
       console.log('消息')
+      wepy.navigateTo({ url: '/pages/packageMine/message/index' });
     },
     toAccountA() {
+      wepy.navigateTo({ url: '/pages/packageMine/account/index' });
       console.log('账户')
     },
     toDeviceA() {
+      wepy.navigateTo({ url: '/pages/packageIndex/deviceList/index' });
       console.log('设备')
     },
     toServiceA() {

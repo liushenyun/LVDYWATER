@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -73,6 +73,27 @@
 					"id": -1,
 					"name": "滤芯使用情况",
 					"pathName": "pages/packageIndex/filter/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "消息列表",
+					"pathName": "pages/packageMine/message/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设备列表",
+					"pathName": "pages/packageIndex/deviceList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "我的账户",
+					"pathName": "pages/packageMine/account/index",
 					"query": "",
 					"scene": null
 				}

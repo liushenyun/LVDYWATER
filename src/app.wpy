@@ -28,7 +28,7 @@ export default class extends wepy.app {
     window: {
       // backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#FFF',
-      navigationBarTitleText: '绿鼎源净水',
+      navigationBarTitleText: '鼎绿源净水',
       navigationBarTextStyle: 'black'
     },
     subPackages: [
@@ -37,6 +37,7 @@ export default class extends wepy.app {
         pages: [
           'addDevice/index',
           'device/index',
+          'deviceList/index',
           'filter/index',
           'test/index'
         ]
@@ -44,7 +45,15 @@ export default class extends wepy.app {
       {
         root: 'pages/packageMine',
         // pages: ['test/index', 'feedback/index', 'order/index', 'orderDetail/index']
-        pages: ['myService/index', 'userAgreement/index', 'deviceBook/index', 'about/index', 'feedback/index']
+        pages: [
+          'message/index',
+          'account/index',
+          'myService/index',
+          'userAgreement/index',
+          'deviceBook/index',
+          'about/index',
+          'feedback/index'
+        ]
       }
     ],
     tabBar: {
