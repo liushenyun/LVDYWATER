@@ -2,7 +2,7 @@
   <view class='device-ctner'>
     
     <view class="circle-wrap">
-      <view class="circle-inner">
+      <view class="circle-inner" @tap='toFilterA'>
         <view class="circle">
           <view class="w-a">净水TDS</view>
           <view class="w-b">15</view>
@@ -50,11 +50,11 @@
       </view>
     </view>
     <view class="btn-wrap">
-      <view class="btn" hover-class='icx-click-hover'>
+      <view @tap='startA' class="btn" hover-class='icx-click-hover'>
         <image src='../../../images/btn_sw_sel.png'></image>
         <text>开启</text>
       </view>
-      <view class="btn" hover-class='icx-click-hover'>
+      <view @tap='flashA' class="btn" hover-class='icx-click-hover'>
         <image src='../../../images/btn_rinse_sel.png'></image>
         <text>冲洗</text>
       </view>
@@ -78,22 +78,14 @@ export default class Index extends wepy.page {
     isBad: false
   };
   methods = {
-    bindReplaceInput(e) {
-      console.log(e.detail.value);
+    startA() {
+      console.log('开启')
     },
-    addPhotoA() {
-      let _self = this
-      wx.chooseImage({
-        count: 1,
-        sizeType: ['original', 'compressed'],
-        sourceType: ['album', 'camera'],
-        success(res) {
-          // tempFilePath可以作为img标签的src属性显示图片
-          const tempFilePaths = res.tempFilePaths[0]
-          _self.imageArr.push(tempFilePaths)
-          _self.$apply()
-        }
-      })
+    flashA() {
+      console.log('冲洗')
+    },
+    toFilterA() {
+      wepy.navigateTo({ url: '/pages/packageIndex/filter/index' });
     }
   }
 }

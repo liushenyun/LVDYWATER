@@ -1,0 +1,71 @@
+@import '../../../common/css/rpx.scss';
+@import '../../../common/css/const.scss';
+@import '../../../common/css/mixin.scss';
+page{
+    height: 100%;
+    // background-image: linear-gradient(45deg, #0097FF 0%, #66E0FF 100%);
+}
+.filter-ctner{
+    height: 100%;
+    padding: rpx(30) 0 rpx(105) 0;
+    position: relative;
+    .filter-wrap{
+        padding: 0 rpx(34);
+        height: 100%;
+        overflow: scroll;
+        .filter-item{
+            padding: rpx(40) rpx(40);
+            margin-bottom: rpx(30);
+            background: #F8F8F8;
+            text-align: center;
+            .filter-name {
+                font-size: rpx(30);
+                color: #1F1F1F;
+                height: rpx(42);
+                line-height: rpx(42);
+                font-weight: 600;
+            }
+            .filter-des {
+                height: rpx(34);
+                line-height: rpx(34);
+                font-size: rpx(24);
+                color: #B3B3B3;
+                margin: rpx(12) 0 rpx(28) 0;
+            }
+            .process-wrap{
+                height: rpx(24);
+                background: rgba(30,156,244,0.15);
+                border-radius: rpx(12);
+                overflow: hidden;
+                position: relative;
+                &.alarm{
+                    background: rgba(245,25,69,0.08);
+                    .process{
+                        background: #F51945;
+                    }
+                }
+                .process {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 0;
+                    height: 100%;
+                    background: #00AAFF;
+                    border-radius: inherit;
+                }
+            }
+        }
+    }
+    .tip{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: rpx(100);
+        line-height: rpx(100);
+        background: #00AAFF;
+        font-size: rpx(30);
+        color: #FFF;
+        text-align: center;
+    }
+}

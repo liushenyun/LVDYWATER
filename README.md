@@ -95,3 +95,4 @@ const apiwechatLogin = () => `${API_DOMAIN}/connect/wechat`
 2. tab栏: 设备未选中图片
 3. 用户反馈：问题类型选中右上角图标
 3. 设备：缺少扫码添加设备和输入添加设备按钮
+5. 设备首页：缺少当前水温

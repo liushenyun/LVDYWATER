@@ -1,0 +1,46 @@
+<template>
+  <view class='filter-ctner'>
+   <view class="filter-wrap">
+     <view class="filter-item" wx:for='{{filterArr}}' wx:key="index">
+       <view class="filter-name">第{{item.name}}级PP棉</view>
+       <view class="filter-des">当前滤芯剩余使用流量</view>
+       <view class="process-wrap {{item.percent < 10 ? 'alarm':''}}">
+        <view class="process" style="width: {{item.percent}}%"></view>
+       </view>
+     </view>
+   </view>
+
+   <view class="tip" @tap='tipA'>提醒服务商家更换滤芯</view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Filter extends wepy.page {
+  config = {
+    // navigationBarBackgroundColor: '#09103b',
+    // navigationBarTextStyle: '#FFF',
+    navigationBarTitleText: '滤芯使用情况'
+  };
+  components = {
+  };
+  data = {
+    filterArr: [
+      { percent: 30, name: '一' },
+      { percent: 8, name: '二' },
+      { percent: 64, name: '三' },
+      { percent: 48, name: '四' },
+      { percent: 79, name: '五' }
+    ]
+  };
+  methods = {
+    tipA() {
+      console.log('提醒服务商家')
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+@import './index'
+</style>
+

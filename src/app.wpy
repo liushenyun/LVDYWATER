@@ -34,7 +34,12 @@ export default class extends wepy.app {
     subPackages: [
       {
         root: 'pages/packageIndex',
-        pages: ['addDevice/index', 'device/index', 'test/index']
+        pages: [
+          'addDevice/index',
+          'device/index',
+          'filter/index',
+          'test/index'
+        ]
       },
       {
         root: 'pages/packageMine',
