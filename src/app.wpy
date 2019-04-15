@@ -48,6 +48,9 @@ export default class extends wepy.app {
         pages: [
           'message/index',
           'account/index',
+          'charge/index',
+          'payedBill/index',
+          'unpayedBill/index',
           'myService/index',
           'userAgreement/index',
           'deviceBook/index',

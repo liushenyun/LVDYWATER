@@ -7,28 +7,28 @@
         </view>
         <view class="accont-wrap">
 
-          <view class="account-item">
+          <view class="account-item" @tap='toChargeA'>
             <image class="account-a" src='../../../images/btn_list_volume.png'></image>
             <view class="account-b">充值</view>
             <view class="account-c">需要修改</view>
             <image class="account-d" src='../../../images/ic_right.png'></image>
           </view>
 
-          <view class="account-item">
+          <view class="account-item" @tap='toPayedBillA'>
             <image class="account-a" src='../../../images/btn_list_zd.png'></image>
             <view class="account-b">我的账单</view>
             <view class="account-c">已支付</view>
             <image class="account-d" src='../../../images/ic_right.png'></image>
           </view>
 
-          <view class="account-item">
+          <view class="account-item" @tap='toUnpayedBillA'>
             <image class="account-a" src='../../../images/btn_list_zd2.png'></image>
             <view class="account-b">我的账单</view>
             <view class="account-c">未支付</view>
             <image class="account-d" src='../../../images/ic_right.png'></image>
           </view>
 
-          <view class="account-item">
+          <view class="account-item" @tap='toPackageA'>
             <image class="account-a" src='../../../images/btn_list_itaoc.png'></image>
             <view class="account-b">转套餐</view>
             <view class="account-c">选择转计费方式套餐系统将自动结算</view>
@@ -57,16 +57,17 @@ export default class Account extends wepy.page {
   computed = {};
 
   methods = {
-    toRecordA() {
-    //   wepy.navigateTo({ url: '/pages/packageMine/order/index' });
+    toChargeA() {
+      wepy.navigateTo({ url: '/pages/packageMine/charge/index' });
     },
-    toInstallA() {
-    //   wepy.navigateTo({ url: '/pages/packageMine/feedback/index' });
+    toPayedBillA() {
+      wepy.navigateTo({ url: '/pages/packageMine/payedBill/index' });
     },
-     toAfterA() {
-    //   wepy.navigateTo({ url: '/pages/packageMine/feedback/index' });
+     toUnpayedBillA() {
+      wepy.navigateTo({ url: '/pages/packageMine/unpayedBill/index' });
     },
-     toMoveDeviceA() {
+     toPackageA() {
+       console.log('转套餐')
     //   wepy.navigateTo({ url: '/pages/packageMine/feedback/index' });
     }
   };
